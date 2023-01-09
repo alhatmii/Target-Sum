@@ -9,7 +9,7 @@ public class IntNumberSum {
 	public static List<int[]> findpairs(int[] numbers, int targetSum){
 		List<int[]> pairs = new ArrayList<>();
 		for (int i = 0; i < numbers.length; i++) {
-			for (int j = 0; j < numbers.length; j++) {
+			for (int j = i + 1; j < numbers.length; j++) {
 				if (numbers[i] + numbers[j] == targetSum) {
 					pairs.add(new int [] { numbers[i], numbers[j]});
 				}
@@ -28,7 +28,7 @@ public class IntNumberSum {
 
 		List<int[]> pairs = findpairs(numbers, targetSum);
 		for (int[] pair : pairs) {
-			System.out.println(pair[0] + "," + pair[1]);
+			System.out.println("First Number is: " + pair[0] + " , " + "Second Number is: " + pair[1]);
 		}
 		
 	}
